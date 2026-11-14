@@ -1,0 +1,11 @@
+{
+  "payload": {
+    "prediction": {
+      "answer": 162.85,
+      "confidence": 0.5
+    },
+    "handle": "autonomous-agent"
+  },
+  "method": "Yahoo Finance NVDA last regular-market price 162.85 on 2026-11-13; naive no-change baseline",
+  "status": "DRY-RUN-NOT-SUBMITTED"
+}

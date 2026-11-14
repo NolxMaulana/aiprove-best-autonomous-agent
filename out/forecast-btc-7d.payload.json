@@ -1,0 +1,11 @@
+{
+  "payload": {
+    "prediction": {
+      "answer": "no",
+      "confidence": 0.75
+    },
+    "handle": "autonomous-agent"
+  },
+  "method": "CoinGecko BTC 7d: 75776.38 -> 65505.30 USD (return -0.1355); momentum rule, confidence capped at 0.75",
+  "status": "DRY-RUN-NOT-SUBMITTED"
+}

@@ -1,0 +1,443 @@
+{
+  "mode": "DRY-RUN",
+  "api_base": "https://aiprove.fun",
+  "handle": "autonomous-agent",
+  "address_fingerprint": "sha256:8c5261f8a376",
+  "bounties_evaluated": 20,
+  "verdict_counts": {
+    "solvable": 4,
+    "eligible-live": 2,
+    "skipped": 14
+  },
+  "verdicts": {
+    "write-article-aiprove": {
+      "title": "Write an article about AIProve",
+      "cat": "content",
+      "lane": "PosterJudge",
+      "amt": "2,000,000",
+      "unit": "PROVE",
+      "closes": "72h",
+      "verdict": "skipped",
+      "reason": "PosterJudge = subjective human rubric, not autonomously gradeable; no repo publish path without credentials"
+    },
+    "make-art-aiprove": {
+      "title": "Make art for AIProve (mascot, poster or logo riff)",
+      "cat": "design",
+      "lane": "PosterJudge",
+      "amt": "5,000,000",
+      "unit": "PROVE",
+      "closes": "96h",
+      "verdict": "skipped",
+      "reason": "PosterJudge = subjective human rubric, not autonomously gradeable; no repo publish path without credentials"
+    },
+    "refer-most-agents": {
+      "title": "Refer the most agents to the arena",
+      "cat": "marketing",
+      "lane": "AutoGrade",
+      "amt": "10,000,000",
+      "unit": "PROVE",
+      "closes": "15d",
+      "verdict": "skipped",
+      "reason": "needs referrals, not solo-solvable"
+    },
+    "eth-pnl-fixed": {
+      "title": "Highest backtest PnL on the fixed ETH dataset",
+      "cat": "trading",
+      "lane": "AutoGrade",
+      "amt": "2,000,000",
+      "unit": "PROVE",
+      "closes": "7d",
+      "verdict": "skipped",
+      "reason": "needs frozen ETH dataset + strategy replay; no solver in this build"
+    },
+    "aiprove-mascot": {
+      "title": "Design the AIProve mascot",
+      "cat": "design",
+      "lane": "PosterJudge",
+      "amt": "1,000,000",
+      "unit": "PROVE",
+      "closes": "7d",
+      "verdict": "skipped",
+      "reason": "PosterJudge = subjective human rubric, not autonomously gradeable; no repo publish path without credentials"
+    },
+    "explainer-video-aiprove": {
+      "title": "Best 60-second explainer video about AIProve",
+      "cat": "content",
+      "lane": "PosterJudge",
+      "amt": "5,000,000",
+      "unit": "PROVE",
+      "closes": "7d",
+      "verdict": "skipped",
+      "reason": "PosterJudge = subjective human rubric, not autonomously gradeable; no repo publish path without credentials"
+    },
+    "sample-agent-skillmd": {
+      "title": "Build a sample agent that reads skill.md and enters a bounty",
+      "cat": "development",
+      "lane": "AutoGrade",
+      "amt": "0.12",
+      "unit": "META",
+      "closes": "48h",
+      "verdict": "eligible-live",
+      "reason": "the loop itself is the entry; enter+submit only in live mode"
+    },
+    "forecast-btc-7d": {
+      "title": "Call BTC's 7-day direction",
+      "cat": "forecast",
+      "lane": "AutoGrade",
+      "amt": "0.9",
+      "unit": "NVDA",
+      "closes": "7d",
+      "verdict": "solvable",
+      "reason": "forecast/AutoGrade, local solver available"
+    },
+    "top5-pons-24h": {
+      "title": "Predict the top 5 new pons tokens by market cap, 24h out",
+      "cat": "forecast",
+      "lane": "AutoGrade",
+      "amt": "0.18",
+      "unit": "NVDA",
+      "closes": "24h",
+      "verdict": "skipped",
+      "reason": "needs live pons launch data the agent cannot verify locally"
+    },
+    "forecast-nvda-3d": {
+      "title": "Predict NVDA's close three days out within $2",
+      "cat": "forecast",
+      "lane": "AutoGrade",
+      "amt": "2,000,000",
+      "unit": "PROVE",
+      "closes": "72h",
+      "verdict": "solvable",
+      "reason": "forecast/AutoGrade, local solver available"
+    },
+    "code-golf-expr": {
+      "title": "Smallest expression evaluator that passes every test",
+      "cat": "development",
+      "lane": "AutoGrade",
+      "amt": "1,000,000",
+      "unit": "PROVE",
+      "closes": "72h",
+      "verdict": "solvable",
+      "reason": "development/AutoGrade, local solver available"
+    },
+    "fastest-primes": {
+      "title": "Fastest correct prime counter",
+      "cat": "development",
+      "lane": "AutoGrade",
+      "amt": "1,000,000",
+      "unit": "PROVE",
+      "closes": "72h",
+      "verdict": "solvable",
+      "reason": "development/AutoGrade, local solver available"
+    },
+    "bug-hunt-utils": {
+      "title": "Find the most real bugs in utils.js",
+      "cat": "development",
+      "lane": "AutoGrade",
+      "amt": "0.5",
+      "unit": "NVDA",
+      "closes": "48h",
+      "verdict": "skipped",
+      "reason": "needs challenge repo harness; no solver in this build"
+    },
+    "best-autonomous-agent": {
+      "title": "Best fully-autonomous AIProve agent",
+      "cat": "development",
+      "lane": "AutoGrade",
+      "amt": "0.3",
+      "unit": "GLD",
+      "closes": "48h",
+      "verdict": "eligible-live",
+      "reason": "this entry itself; submit only in live mode"
+    },
+    "retweet-and-quote-the-launch-post": {
+      "title": "Retweet and quote the beta arena post",
+      "cat": "marketing",
+      "lane": "PosterJudge",
+      "amt": "0.01",
+      "unit": "ETH",
+      "closes": "24h",
+      "verdict": "skipped",
+      "reason": "needs X retweet"
+    },
+    "bughunt-stakepool": {
+      "title": "Audit StakePool.sol \u2014 find the planted vulnerabilities",
+      "cat": "development",
+      "lane": "AutoGrade",
+      "amt": "0.2",
+      "unit": "NVDA",
+      "closes": "3d",
+      "verdict": "skipped",
+      "reason": "hold-to-play / hold requirement"
+    },
+    "nvda-jensen-earnings": {
+      "title": "Call the NVDA move, first earnings after Jensen",
+      "cat": "forecast",
+      "lane": "AutoGrade",
+      "amt": "0.1",
+      "unit": "NVDA",
+      "closes": "to earnings",
+      "verdict": "skipped",
+      "reason": "hold-to-play / hold requirement"
+    },
+    "prove-mc-3d": {
+      "title": "Call $PROVE market cap, 3 days in",
+      "cat": "forecast",
+      "lane": "AutoGrade",
+      "amt": "1,000,000",
+      "unit": "PROVE",
+      "closes": "launch + 72h",
+      "verdict": "skipped",
+      "reason": "hold-to-play / hold requirement"
+    },
+    "marketing-prove-launch": {
+      "title": "Post about the $PROVE launch on pons",
+      "cat": "marketing",
+      "lane": "PosterJudge",
+      "amt": "2,000,000",
+      "unit": "PROVE",
+      "closes": "48h",
+      "verdict": "skipped",
+      "reason": "hold-to-play / hold requirement"
+    },
+    "eth-signal-pnl-hard": {
+      "title": "Best 48h ETH trading signal, net PnL after fees",
+      "cat": "trading",
+      "lane": "AutoGrade",
+      "amt": "0.2",
+      "unit": "NVDA",
+      "closes": "48h",
+      "verdict": "skipped",
+      "reason": "hold-to-play / hold requirement"
+    }
+  },
+  "built": [
+    {
+      "slug": "forecast-btc-7d",
+      "built": true,
+      "payload_file": "out/forecast-btc-7d.payload.json",
+      "answer": "no",
+      "confidence": 0.75,
+      "method": "CoinGecko BTC 7d: 75776.38 -> 65505.30 USD (return -0.1355); momentum rule, confidence capped at 0.75"
+    },
+    {
+      "slug": "forecast-nvda-3d",
+      "built": true,
+      "payload_file": "out/forecast-nvda-3d.payload.json",
+      "prediction": 162.85,
+      "method": "Yahoo Finance NVDA last regular-market price 162.85 on 2026-11-13; naive no-change baseline"
+    },
+    {
+      "slug": "code-golf-expr",
+      "built": true,
+      "solution": "out/solutions/code-golf-expr/solution.js",
+      "test": "out/solutions/code-golf-expr/test.js",
+      "test_output": "PASS 12/12",
+      "note": "repoUrl+commit NOT set: dry-run, no repo published; needs live publish step"
+    },
+    {
+      "slug": "fastest-primes",
+      "built": true,
+      "solution": "out/solutions/fastest-primes/primes.c",
+      "binary": "out/solutions/fastest-primes/primes",
+      "test_output": "5/5 cases pass; pi(10)=4 (want 4); pi(100)=25 (want 25); pi(1000)=168 (want 168); pi(100000)=9592 (want 9592); pi(5000000)=348513 (want 348513)",
+      "note": "repoUrl+commit NOT set: dry-run, no repo published; needs live publish step"
+    }
+  ],
+  "submitted_live": [],
+  "live_posts_sent": 0,
+  "steps": [
+    {
+      "time": "2026-11-14 15:20:17 UTC",
+      "step": "0.start",
+      "status": "OK",
+      "detail": "mode=DRY-RUN api=https://aiprove.fun handle=autonomous-agent (dry-run: zero POST requests; live: fresh ephemeral keypair, no stored key)"
+    },
+    {
+      "time": "2026-11-14 15:20:18 UTC",
+      "step": "1.fetch-skill",
+      "status": "OK",
+      "detail": "GET https://aiprove.fun/skill.md -> HTTP 200, 6722 chars, endpoints found: auth/challenge, auth/verify, bounties, enter, submit, me, leaderboard"
+    },
+    {
+      "time": "2026-11-14 15:20:18 UTC",
+      "step": "2.keypair",
+      "status": "OK",
+      "detail": "fresh ephemeral secp256k1 keypair generated in memory; address fingerprint sha256:8c5261f8a376 (address itself NOT logged); private key never written to disk"
+    },
+    {
+      "time": "2026-11-14 15:20:18 UTC",
+      "step": "3.sign-selftest",
+      "status": "OK",
+      "detail": "test vector privkey=1 pubkey=G verified; EIP-191 sign+recover round-trip matches own keypair (signature NOT logged)"
+    },
+    {
+      "time": "2026-11-14 15:20:18 UTC",
+      "step": "4.auth",
+      "status": "SKIPPED-DRY-RUN",
+      "detail": "no challenge/verify sent; auth deferred to live run"
+    },
+    {
+      "time": "2026-11-14 15:20:20 UTC",
+      "step": "5a.health",
+      "status": "OK",
+      "detail": "GET https://aiprove.fun/api/health -> HTTP 200"
+    },
+    {
+      "time": "2026-11-14 15:20:21 UTC",
+      "step": "5b.list-open",
+      "status": "OK",
+      "detail": "GET /api/bounties?status=open -> 20 open bounties"
+    },
+    {
+      "time": "2026-11-14 15:20:22 UTC",
+      "step": "6.classify-write-article-aiprove",
+      "status": "OK",
+      "detail": "verdict=skipped (PosterJudge = subjective human rubric, not autonomously gradeable; no repo publish path without credentials)"
+    },
+    {
+      "time": "2026-11-14 15:20:24 UTC",
+      "step": "6.classify-make-art-aiprove",
+      "status": "OK",
+      "detail": "verdict=skipped (PosterJudge = subjective human rubric, not autonomously gradeable; no repo publish path without credentials)"
+    },
+    {
+      "time": "2026-11-14 15:20:25 UTC",
+      "step": "6.classify-refer-most-agents",
+      "status": "OK",
+      "detail": "verdict=skipped (needs referrals, not solo-solvable)"
+    },
+    {
+      "time": "2026-11-14 15:20:26 UTC",
+      "step": "6.classify-eth-pnl-fixed",
+      "status": "OK",
+      "detail": "verdict=skipped (needs frozen ETH dataset + strategy replay; no solver in this build)"
+    },
+    {
+      "time": "2026-11-14 15:20:27 UTC",
+      "step": "6.classify-aiprove-mascot",
+      "status": "OK",
+      "detail": "verdict=skipped (PosterJudge = subjective human rubric, not autonomously gradeable; no repo publish path without credentials)"
+    },
+    {
+      "time": "2026-11-14 15:20:28 UTC",
+      "step": "6.classify-explainer-video-aiprove",
+      "status": "OK",
+      "detail": "verdict=skipped (PosterJudge = subjective human rubric, not autonomously gradeable; no repo publish path without credentials)"
+    },
+    {
+      "time": "2026-11-14 15:20:29 UTC",
+      "step": "6.classify-sample-agent-skillmd",
+      "status": "OK",
+      "detail": "verdict=eligible-live (the loop itself is the entry; enter+submit only in live mode)"
+    },
+    {
+      "time": "2026-11-14 15:20:31 UTC",
+      "step": "6.classify-forecast-btc-7d",
+      "status": "OK",
+      "detail": "verdict=solvable (forecast/AutoGrade, local solver available)"
+    },
+    {
+      "time": "2026-11-14 15:20:32 UTC",
+      "step": "6.classify-top5-pons-24h",
+      "status": "OK",
+      "detail": "verdict=skipped (needs live pons launch data the agent cannot verify locally)"
+    },
+    {
+      "time": "2026-11-14 15:20:35 UTC",
+      "step": "6.classify-forecast-nvda-3d",
+      "status": "OK",
+      "detail": "verdict=solvable (forecast/AutoGrade, local solver available)"
+    },
+    {
+      "time": "2026-11-14 15:20:36 UTC",
+      "step": "6.classify-code-golf-expr",
+      "status": "OK",
+      "detail": "verdict=solvable (development/AutoGrade, local solver available)"
+    },
+    {
+      "time": "2026-11-14 15:20:37 UTC",
+      "step": "6.classify-fastest-primes",
+      "status": "OK",
+      "detail": "verdict=solvable (development/AutoGrade, local solver available)"
+    },
+    {
+      "time": "2026-11-14 15:20:38 UTC",
+      "step": "6.classify-bug-hunt-utils",
+      "status": "OK",
+      "detail": "verdict=skipped (needs challenge repo harness; no solver in this build)"
+    },
+    {
+      "time": "2026-11-14 15:20:40 UTC",
+      "step": "6.classify-best-autonomous-agent",
+      "status": "OK",
+      "detail": "verdict=eligible-live (this entry itself; submit only in live mode)"
+    },
+    {
+      "time": "2026-11-14 15:20:40 UTC",
+      "step": "6.classify-retweet-and-quote-the-launch-post",
+      "status": "OK",
+      "detail": "verdict=skipped (needs X retweet)"
+    },
+    {
+      "time": "2026-11-14 15:20:41 UTC",
+      "step": "6.classify-bughunt-stakepool",
+      "status": "OK",
+      "detail": "verdict=skipped (hold-to-play / hold requirement)"
+    },
+    {
+      "time": "2026-11-14 15:20:42 UTC",
+      "step": "6.classify-nvda-jensen-earnings",
+      "status": "OK",
+      "detail": "verdict=skipped (hold-to-play / hold requirement)"
+    },
+    {
+      "time": "2026-11-14 15:20:43 UTC",
+      "step": "6.classify-prove-mc-3d",
+      "status": "OK",
+      "detail": "verdict=skipped (hold-to-play / hold requirement)"
+    },
+    {
+      "time": "2026-11-14 15:20:44 UTC",
+      "step": "6.classify-marketing-prove-launch",
+      "status": "OK",
+      "detail": "verdict=skipped (hold-to-play / hold requirement)"
+    },
+    {
+      "time": "2026-11-14 15:20:45 UTC",
+      "step": "6.classify-eth-signal-pnl-hard",
+      "status": "OK",
+      "detail": "verdict=skipped (hold-to-play / hold requirement)"
+    },
+    {
+      "time": "2026-11-14 15:20:45 UTC",
+      "step": "7.build-forecast-btc-7d",
+      "status": "OK",
+      "detail": "payload built locally: answer=no confidence=0.75 (CoinGecko BTC 7d: 75776.38 -> 65505.30 USD (return -0.1355); momentum rule, confidence capped at 0.75)"
+    },
+    {
+      "time": "2026-11-14 15:20:46 UTC",
+      "step": "7.build-forecast-nvda-3d",
+      "status": "OK",
+      "detail": "payload built locally: close=162.85 (Yahoo Finance NVDA last regular-market price 162.85 on 2026-11-13; naive no-change baseline)"
+    },
+    {
+      "time": "2026-11-14 15:20:46 UTC",
+      "step": "7.build-code-golf-expr",
+      "status": "OK",
+      "detail": "solution.js written, node test: PASS 12/12"
+    },
+    {
+      "time": "2026-11-14 15:20:46 UTC",
+      "step": "7.build-fastest-primes",
+      "status": "OK",
+      "detail": "primes.c compiled with gcc -O2, local test: 5/5 cases pass; pi(10)=4 (want 4); pi(100)=25 (want 25); pi(1000)=168 (want 168); pi(100000)=9592 (want 9592); pi(5000000)=348513 (want 348513)"
+    },
+    {
+      "time": "2026-11-14 15:20:46 UTC",
+      "step": "8.submit",
+      "status": "SKIPPED-DRY-RUN",
+      "detail": "4 entries built locally, 0 submitted; live submit needs --live + AIPROVE_LIVE=1 (+ --repo-url/--commit for code)"
+    }
+  ]
+}
