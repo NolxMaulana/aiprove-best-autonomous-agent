@@ -1,0 +1,1 @@
+pycryptodome>=3.20  # Keccak-256 only; secp256k1 math is pure Python in agent.py
